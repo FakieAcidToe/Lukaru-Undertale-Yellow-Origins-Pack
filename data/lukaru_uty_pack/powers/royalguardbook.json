@@ -72,5 +72,34 @@
 			"type": "origins:nbt",
 			"nbt": "{lukaruRoyalBook: 1b}"
 		}
+	},
+	"cantuseinoffhand": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:nbt",
+			"nbt": "{lukaruRoyalBook: 1b}"
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:nbt",
+						"nbt": "{lukaruRoyalBook: 1b}"
+					},
+					"inverted": true
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "offhand",
+					"item_condition": {
+						"type": "origins:nbt",
+						"nbt": "{lukaruRoyalBook: 1b}"
+					}
+				}
+			]
+		}
 	}
 }
