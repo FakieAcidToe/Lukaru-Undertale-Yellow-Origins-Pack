@@ -74,6 +74,7 @@
 		}
 	},
 	"cantuseinoffhand": {
+		"name": "Prevents accidental offhand usage",
 		"type": "origins:prevent_item_use",
 		"item_condition": {
 			"type": "origins:nbt",
