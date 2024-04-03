@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"lukaru_uty_pack:desert_spawn",
+		"lukaru_uty_pack:thievery",
+		"lukaru_uty_pack:dimensional_satchel",
+		"origins:velvet_paws",
+		"origins:climbing",
+		"origins:light_armor",
+		"origins:nine_lives"
+	],
+	"icon": "minecraft:gold_nugget",
+	"impact": 2,
+	"name": "Mooch",
+	"description": "* :)"
+}

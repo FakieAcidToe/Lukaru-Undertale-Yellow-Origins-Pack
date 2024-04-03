@@ -1,0 +1,11 @@
+{
+	"type": "origins:prevent_sleep",
+	"name": "Fear of Heights",
+	"description": "You can't fall asleep above Y = 86.",
+	"block_condition": {
+		"type": "origins:height",
+		"comparison": ">=",
+		"compare_to": 86
+	},
+	"message": "It's too high up for you to sleep. Sleep below Y = 86."
+}

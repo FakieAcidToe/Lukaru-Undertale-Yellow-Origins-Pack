@@ -1,0 +1,9 @@
+{
+	"type": "origins:modify_xp_gain",
+	"name": "Scatterbrained",
+	"description": "Gain 50% less XP.",
+	"modifier": {
+		"operation": "multiply_base",
+		"value": 0.5
+	}
+}

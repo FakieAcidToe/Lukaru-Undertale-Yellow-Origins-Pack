@@ -1,0 +1,9 @@
+{
+	"type": "origins:invulnerability",
+	"name": "Lightning Immunity",
+	"description": "You are immune to lightning strikes.",
+	"damage_condition": {
+		"type": "origins:name",
+		"name": "lightningBolt"
+	}
+}

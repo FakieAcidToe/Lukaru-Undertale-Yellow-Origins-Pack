@@ -1,0 +1,76 @@
+{
+	"type": "origins:multiple",
+	"name": "Royal Guard Equipment",
+	"description": "You start with a Royal Guard Guidebook and a pair of durable yellow boots.",
+	"items": {
+		"type": "origins:starting_equipment",
+		"stacks": [
+			{
+				"item": "minecraft:leather_boots",
+				"amount": 1,
+				"tag": "{display: {color: 16498744, Name: '{\"text\": \"Snow Boots\", \"color\": \"yellow\", \"italic\": false}'}, Trim:{pattern:host,material:quartz}, Enchantments:[{lvl:4,id:feather_falling}], HideFlags:196, Unbreakable:1}",
+				"slot": 7
+			},
+			{
+				"item": "minecraft:written_book",
+				"amount": 1,
+				"tag": "{display: {Name: '{\"text\": \"Royal Guard Guidebook\", \"color\": \"light_purple\", \"italic\": false}'}, generation: 3, title: \"Royal Guard Guidebook\", author: \"The Royal Guard\", pages: ['{\"text\": \"§c§lProtocol One§r\nBe courteous.\nAllow your opponent the first attack.\n\n§c§lProtocol Two§r\nAttack back.\nShow your true strength of a Royal Guard.\"}', '{\"text\": \"§c§lProtocol Three§r\nStand strong.\nBeing attacked will hurt.\n\n§c§lProtocol Four§r\nStay agile.\nBend your knees and stand light on your feet to react quickly.\"}', '{\"text\": \"§c§lProtocol Five§r\nApprehend the enemy.\nWin.\n\n§c§lProtocol Six§r\nRetreat if you must.\nYour life is important too.\"}', '{\"text\": \"§c§lProtocol Seven§r\nKeep this book on you.\nHold this book in your offhand and refer to it if you forget the protocols.\"}'], lukaruRoyalBook: 1b}",
+				"slot": 8
+			}
+		]
+	},
+	"offhandbook": {
+		"type": "origins:stacking_status_effect",
+		"min_stacks": 0,
+		"max_stacks": 1,
+		"duration_per_stack": 20,
+		"effects": [
+			{
+				"effect": "minecraft:strength",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": true
+			},
+			{
+				"effect": "minecraft:resistance",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": true
+			},
+			{
+				"effect": "minecraft:speed",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": true
+			}
+		],
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:nbt",
+						"nbt": "{lukaruRoyalBook: 1b}"
+					}
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "offhand",
+					"item_condition": {
+						"type": "origins:nbt",
+						"nbt": "{lukaruRoyalBook: 1b}"
+					}
+				}
+			]
+		}
+	},
+	"keepinv": {
+		"type": "origins:keep_inventory",
+		"item_condition": {
+			"type": "origins:nbt",
+			"nbt": "{lukaruRoyalBook: 1b}"
+		}
+	}
+}

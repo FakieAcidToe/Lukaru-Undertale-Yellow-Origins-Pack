@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"lukaru_uty_pack:summon_lightning",
+		"lukaru_uty_pack:lightning_immunity",
+		"lukaru_uty_pack:bat_generation",
+		"lukaru_uty_pack:stronger_in_shade",
+		"origins:cat_vision",
+		"origins:vegetarian",
+		"origins:fragile"
+	],
+	"icon": "minecraft:bat_spawn_egg",
+	"impact": 2,
+	"name": "Dalv",
+	"description": "Just wants to be left alone..."
+}

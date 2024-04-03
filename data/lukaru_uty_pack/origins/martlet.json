@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"lukaru_uty_pack:snow_spawn",
+		"lukaru_uty_pack:royalguardbook",
+		"lukaru_uty_pack:scatterbrained",
+		"lukaru_uty_pack:invis_elytra",
+		"lukaru_uty_pack:air_dash_bird",
+		"lukaru_uty_pack:frail_wings",
+		"lukaru_uty_pack:woodworker",
+		"lukaru_uty_pack:ceroba_kisser"
+	],
+	"icon": "minecraft:feather",
+	"impact": 2,
+	"name": "Martlet",
+	"description": "* A little scatterbrained."
+}

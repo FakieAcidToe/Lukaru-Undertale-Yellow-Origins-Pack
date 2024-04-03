@@ -1,0 +1,40 @@
+{
+	"type": "origins:multiple",
+	"name": "Smite",
+	"description": "You can summon lightning at any location you can see.",
+	"cooldown": {
+		"type": "origins:cooldown",
+		"cooldown": 100,
+		"hud_render": {
+			"sprite_location": "origins:textures/gui/resource_bar.png",
+			"bar_index": 2
+		}
+	},
+	"smite": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:raycast",
+			"distance": 64,
+			"block": true,
+			"entity": true,
+			"shape_type": "collider",
+			"fluid_handling": "any",
+			"command_at_hit": "summon minecraft:lightning_bolt ~ ~ ~",
+			"command_step": 1,
+			"hit_action": {
+				"type": "origins:trigger_cooldown",
+				"power": "lukaru_uty_pack:summon_lightning_cooldown"
+			}
+		},
+		"key": {
+			"key": "key.origins.primary_active",
+			"continuous": false
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "lukaru_uty_pack:summon_lightning_cooldown",
+			"comparison": "==",
+			"compare_to": 0
+		}
+	}
+}

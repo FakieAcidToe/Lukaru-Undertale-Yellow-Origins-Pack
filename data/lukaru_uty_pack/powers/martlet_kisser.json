@@ -1,0 +1,72 @@
+{
+	"hidden": true,
+	"type": "origins:action_on_entity_use",
+	"bientity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:target_action",
+				"action": {
+					"type": "origins:heal",
+					"amount": 6
+				}
+			},
+			{
+				"type": "origins:actor_action",
+				"action": {
+					"type": "origins:heal",
+					"amount": 6
+				}
+			},
+			{
+				"type": "origins:target_action",
+				"action": {
+					"type": "origins:spawn_particles",
+					"particle": {
+						"type": "minecraft:heart"
+					},
+					"count": 4,
+					"speed": 0.0,
+					"force": true,
+					"spread": {
+						"x": 0.5,
+						"y": 0.5,
+						"z": 0.5
+					},
+					"offset_y": 1
+				}
+			},
+			{
+				"type": "origins:actor_action",
+				"action": {
+					"type": "origins:spawn_particles",
+					"particle": {
+						"type": "minecraft:heart"
+					},
+					"count": 4,
+					"speed": 0.0,
+					"force": true,
+					"spread": {
+						"x": 0.5,
+						"y": 0.5,
+						"z": 0.5
+					},
+					"offset_y": 1
+				}
+			}
+		]
+	},
+	"bientity_condition": {
+		"type": "origins:target_condition",
+		"condition": {
+			"type": "origins:origin",
+			"origin": "lukaru_uty_pack:martlet"
+		}
+	},
+	"item_condition": {
+		"type": "origins:empty"
+	},
+	"hands": [
+		"main_hand"
+	]
+}

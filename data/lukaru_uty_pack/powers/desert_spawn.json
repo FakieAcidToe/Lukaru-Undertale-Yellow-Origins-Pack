@@ -1,0 +1,7 @@
+{
+	"type": "origins:modify_player_spawn",
+	"name": "Wild East",
+	"description": "You spawn in a Desert Biome.",
+	"dimension": "minecraft:overworld",
+	"biome": "minecraft:desert"
+}

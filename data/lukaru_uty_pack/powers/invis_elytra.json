@@ -1,0 +1,6 @@
+{
+	"type": "origins:elytra_flight",
+	"name": "Feathered",
+	"description": "You are able to fly as if you have an Elytra equipped.",
+	"render_elytra": false
+}

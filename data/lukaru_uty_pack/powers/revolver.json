@@ -1,0 +1,140 @@
+{
+	"type": "origins:multiple",
+	"name": "Revolver",
+	"description": "You can shoot projectiles from your trusty revolver.",
+	"ammo": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 7,
+		"hud_render": {
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_points_01.png",
+			"bar_index": 1
+		},
+		"start_value": 6
+	},
+	"reloading": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"start_value": 0
+	},
+	"fire": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:fire_projectile",
+					"entity_type": "minecraft:arrow",
+					"tag": "{pickup:0b}",
+					"speed": 2
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "lukaru_uty_pack:revolver_ammo",
+					"change": -1
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.arrow.shoot"
+				}
+			]
+		},
+		"cooldown": 4,
+		"key": {
+			"key": "key.origins.primary_active",
+			"continuous": true
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "lukaru_uty_pack:revolver_ammo",
+					"comparison": ">",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "lukaru_uty_pack:revolver_reloading",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	"reload": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "lukaru_uty_pack:revolver_reloading",
+			"change": 1
+		},
+		"key": {
+			"key": "key.origins.secondary_active",
+			"continuous": false
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "lukaru_uty_pack:revolver_ammo",
+			"comparison": "<",
+			"compare_to": 6
+		}
+	},
+	"reloadprimary": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "lukaru_uty_pack:revolver_reloading",
+			"change": 1
+		},
+		"key": {
+			"key": "key.origins.primary_active",
+			"continuous": true
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "lukaru_uty_pack:revolver_ammo",
+			"comparison": "==",
+			"compare_to": 0
+		}
+	},
+	"reloadupdate": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "lukaru_uty_pack:revolver_ammo",
+					"change": 1
+				},
+				{
+					"type": "origins:if_else",
+					"condition": {
+						"type": "origins:resource",
+						"resource": "lukaru_uty_pack:revolver_ammo",
+						"comparison": ">=",
+						"compare_to": 6
+					},
+					"if_action": {
+						"type": "origins:change_resource",
+						"resource": "lukaru_uty_pack:revolver_reloading",
+						"change": -1
+					}
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.item_frame.rotate_item"
+				}
+			]
+		},
+		"interval": 12,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "lukaru_uty_pack:revolver_reloading",
+			"comparison": "==",
+			"compare_to": 1
+		}
+	}
+}

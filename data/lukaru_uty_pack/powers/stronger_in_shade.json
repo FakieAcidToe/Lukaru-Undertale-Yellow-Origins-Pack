@@ -1,0 +1,26 @@
+{
+	"type": "origins:stacking_status_effect",
+	"name": "Shady Recluse",
+	"description": "You get Strength and Speed when not under sunlight",
+	"min_stacks": 0,
+	"max_stacks": 1,
+	"duration_per_stack": 20,
+	"effects": [
+		{
+			"effect": "minecraft:strength",
+			"is_ambient": true,
+			"show_particles": false,
+			"show_icon": true
+		},
+		{
+			"effect": "minecraft:speed",
+			"is_ambient": true,
+			"show_particles": false,
+			"show_icon": true
+		}
+	],
+	"condition": {
+		"type": "origins:exposed_to_sun",
+		"inverted": true
+	}
+}

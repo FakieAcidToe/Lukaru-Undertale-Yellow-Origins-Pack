@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"lukaru_uty_pack:desert_spawn",
+		"lukaru_uty_pack:martlet_kisser",
+		"lukaru_uty_pack:cerobastaff",
+		"lukaru_uty_pack:air_dash_fox",
+		"lukaru_uty_pack:fear_of_heights",
+		"origins:velvet_paws",
+		"lukaru_uty_pack:berry_lover",
+		"origins:more_exhaustion"
+	],
+	"icon": "minecraft:sweet_berries",
+	"impact": 2,
+	"name": "Ceroba",
+	"description": "* A legacy not to be forgotten."
+}

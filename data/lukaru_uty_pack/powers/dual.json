@@ -1,0 +1,22 @@
+{
+	"type": "origins:multiple",
+	"name": "Dual",
+	"description": "You deal double projectile damage but also receive double projectile damage.",
+	"dealmoredamage": {
+		"type": "origins:modify_projectile_damage",
+		"modifier": {
+			"operation": "multiply_base_multiplicative",
+			"value": 1
+		}
+	},
+	"takemoredamage": {
+		"type": "origins:modify_damage_taken",
+		"modifier": {
+			"operation": "multiply_base_multiplicative",
+			"value":1
+		},
+		"damage_condition": {
+			"type": "origins:projectile"
+		}
+	}
+}

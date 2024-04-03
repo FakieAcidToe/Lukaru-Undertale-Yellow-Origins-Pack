@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"lukaru_uty_pack:desert_spawn",
+		"lukaru_uty_pack:mothers_shield",
+		"origins:tailwind",
+		"lukaru_uty_pack:air_dash_fox",
+		"lukaru_uty_pack:level_one",
+		"lukaru_uty_pack:fear_of_heights",
+		"lukaru_uty_pack:berry_lover",
+		"origins:more_exhaustion",
+		"lukaru_uty_pack:looks_armorless"
+	],
+	"icon": "minecraft:sweet_berries",
+	"impact": 2,
+	"name": "Kanako",
+	"description": "Love you lots!"
+}

@@ -1,0 +1,13 @@
+{
+	"powers": [
+		"lukaru_uty_pack:desert_spawn",
+		"lukaru_uty_pack:dual",
+		"lukaru_uty_pack:revolver",
+		"lukaru_uty_pack:lasso_rod",
+		"origins:more_exhaustion"
+	],
+	"icon": "minecraft:firework_star",
+	"impact": 2,
+	"name": "Starlo",
+	"description": "The almighty sheriff."
+}

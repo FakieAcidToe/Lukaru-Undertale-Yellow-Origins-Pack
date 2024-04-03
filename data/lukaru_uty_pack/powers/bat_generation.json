@@ -1,0 +1,15 @@
+{
+	"type": "origins:fire_projectile",
+	"name": "Bat Family",
+	"description": "You can create bats from your hands.",
+	"entity_type": "minecraft:bat",
+	"speed": 5,
+	"cooldown": 5,
+	"hud_render": {
+		"should_render": false
+	},
+	"key": {
+		"key": "key.origins.secondary_active",
+		"continuous": true
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"type": "origins:attribute",
+	"name": "LV 1",
+	"description": "You have 2 less hearts of health than the average human.",
+	"modifier": {
+		"name": "LV 1 health reduction",
+		"attribute": "minecraft:generic.max_health",
+		"value": -4.0,
+		"operation": "addition"
+	}
+}

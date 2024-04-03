@@ -1,0 +1,12 @@
+{
+	"type": "origins:inventory",
+	"name": "Dimensional Satchel",
+	"description": "You have access to a satchel with a chest-sized inventory which keep the items on death.",
+	"title": "Dimensional Satchel",
+	"container_type": "chest",
+	"drop_on_death": false,
+	"key": {
+		"key": "key.loadToolbarActivator",
+		"continuous": false
+	}
+}
