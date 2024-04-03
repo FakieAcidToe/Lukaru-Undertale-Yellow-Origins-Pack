@@ -1,7 +1,13 @@
 {
 	"type": "origins:multiple",
 	"name": "Pickpocket",
-	"description": "You can steal valuable items from Players and Villagers.\nRight click them with an empty hand while sneaking to steal.",
+	"description": "You can steal valuable items from Players and Villagers.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "Use Right Click while Sneaking with an empty hand to Steal!"
+		}
+	],
 	"cooldown": {
 		"type": "origins:cooldown",
 		"cooldown": 300,

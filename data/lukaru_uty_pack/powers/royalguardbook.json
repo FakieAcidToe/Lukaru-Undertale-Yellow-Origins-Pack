@@ -2,6 +2,12 @@
 	"type": "origins:multiple",
 	"name": "Royal Guard Equipment",
 	"description": "You start with a Royal Guard Guidebook and a pair of durable yellow boots.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/community/silent/badge/icons/pickaxe.png",
+			"text": "Hold the Guidebook in your hands for Strength, Resistance, and Speed."
+		}
+	],
 	"items": {
 		"type": "origins:starting_equipment",
 		"stacks": [

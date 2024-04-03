@@ -2,6 +2,12 @@
 	"type": "origins:multiple",
 	"name": "Revolver",
 	"description": "You can shoot projectiles from your trusty revolver.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/active.png",
+			"text": "Shoot with %s!"
+		}
+	],
 	"ammo": {
 		"type": "origins:resource",
 		"min": 0,

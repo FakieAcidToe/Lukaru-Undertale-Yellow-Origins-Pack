@@ -2,6 +2,12 @@
 	"type": "origins:multiple",
 	"name": "Mother's Shield",
 	"description": "Completely nullify one attack every 15 seconds with a Diamond Shield.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/community/silent/badge/icons/shield.png",
+			"text": "Taking any damage resets the cooldown."
+		}
+	],
 	"cooldown": {
 		"type": "origins:cooldown",
 		"cooldown": 300,
