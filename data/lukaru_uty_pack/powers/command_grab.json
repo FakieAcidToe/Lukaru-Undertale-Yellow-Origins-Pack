@@ -1,0 +1,85 @@
+{
+	"type": "origins:multiple",
+	"name": "Command Grab",
+	"description": "You can grab entities.\nInteract with entities while sneaking to grab.\nRight click again to throw them.",
+	"grab": {
+		"type": "origins:action_on_entity_use",
+		"bientity_action": {
+			"type": "origins:invert",
+			"action": {
+				"type": "origins:mount"
+			}
+		},
+		"bientity_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:invert",
+					"condition": {
+						"type": "origins:riding",
+						"inverted": true
+					}
+				},
+				{
+					"type": "origins:target_condition",
+					"condition": {
+						"type": "origins:living"
+					}
+				}
+			]
+		},
+		"item_condition": {
+			"type": "origins:empty"
+		},
+		"hands": [
+			"main_hand"
+		],
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:sneaking"
+				},
+				{
+					"type": "origins:passenger",
+					"comparison": "<=",
+					"compare_to": "0"
+				}
+			]
+		}
+	},
+	"throw": {
+		"type": "origins:active_self",
+		"key": {
+			"key": "key.use",
+			"continuous": false
+		},
+		"entity_action": {
+			"type": "origins:passenger_action",
+			"action": {
+				"type": "origins:dismount"
+			},
+			"bientity_action": {
+				"type": "origins:invert",
+				"action": {
+					"type": "origins:add_velocity",
+					"y": -1.5,
+					"z": 0.5
+				}
+			},
+			"recursive": false
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:sneaking",
+					"inverted": true
+				},
+				{
+					"type": "origins:passenger"
+				}
+			]
+		}
+	}
+}

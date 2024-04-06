@@ -1,0 +1,21 @@
+{
+	"type": "origins:multiple",
+	"name": "Bulky",
+	"description": "You move slower but have 3 more hearts.",
+	"slower": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"value": -0.2,
+			"operation": "multiply_base"
+		}
+	},
+	"morehearts": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.max_health",
+			"value": 6.0,
+			"operation": "addition"
+		}
+	}
+}
