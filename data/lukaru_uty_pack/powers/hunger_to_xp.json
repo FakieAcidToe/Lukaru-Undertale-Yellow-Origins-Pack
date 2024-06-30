@@ -1,0 +1,64 @@
+{
+	"type": "origins:multiple",
+	"name": "EXP Hunger Bar",
+	"description": "You don't have a usable hunger bar. Food consumed is directly converted to EXP.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "Hunger bar is permanently set to 3.5 shanks, just enough to sprint."
+		}
+	],
+	"noregen": {
+		"type": "origins:disable_regen"
+	},
+	"immunehunger": {
+		"type": "origins:effect_immunity",
+		"effects": [
+			"minecraft:hunger"
+		]
+	},
+	"noexhaust": {
+		"type": "origins:modify_exhaustion",
+		"modifier": {
+			"operation": "set_base",
+			"value": 0
+		}
+	},
+	"hungertoxpconverter": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:add_xp",
+					"points": 4
+				},
+				{
+					"type": "origins:feed",
+					"food": -1,
+					"saturation": 0
+				}
+			]
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:food_level",
+			"comparison": ">",
+			"compare_to": 7
+		}
+	},
+	"minhunger": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:feed",
+			"food": 1,
+			"saturation": 0
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:food_level",
+			"comparison": "<",
+			"compare_to": 7
+		}
+	}
+}

@@ -1,0 +1,48 @@
+{
+	"type": "origins:active_self",
+	"name": "Heal with EXP",
+	"description": "You can spend EXP levels to heal hearts. 1 level is converted to 3 hearts.",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:add_xp",
+				"levels": -1
+			},
+			{
+				"type": "origins:heal",
+				"amount": 6
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.iron_golem.repair",
+				"volume": 0.5,
+				"pitch": 1.4
+			}
+		]
+	},
+	"hud_render": {
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+		"bar_index": 18
+	},
+	"cooldown": 20,
+	"key": {
+		"key": "key.origins.primary_active",
+		"continuous": true
+	},
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:relative_health",
+				"comparison": "<",
+				"compare_to": 1
+			},
+			{
+				"type": "origins:xp_levels",
+				"comparison": ">=",
+				"compare_to": 1
+			}
+		]
+	}
+}

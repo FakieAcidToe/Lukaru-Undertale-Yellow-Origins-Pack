@@ -1,0 +1,10 @@
+{
+	"type": "origins:attribute",
+	"name": "Low Power",
+	"description": "You start with 5 less hearts of health than the average human.",
+	"modifier": {
+		"attribute": "minecraft:generic.max_health",
+		"value": -10.0,
+		"operation": "addition"
+	}
+}

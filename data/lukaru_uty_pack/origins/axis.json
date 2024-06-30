@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"lukaru_uty_pack:hunger_to_xp",
+		"lukaru_uty_pack:xp_heal",
+		"lukaru_uty_pack:low_power",
+		"lukaru_uty_pack:robot_upgrade"
+	],
+	"icon": "minecraft:iron_door",
+	"impact": 2,
+	"name": "Axis",
+	"description": "* Today means the Surface."
+}
