@@ -1,0 +1,52 @@
+{
+  "name": "Small Size",
+  "description": "You are much smaller than the average human, fitting into a 1-block-tall hole while sneaking.",
+  "type": "origins:action_on_callback",
+  "entity_action_chosen": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:height 0.665 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:width 0.665 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:drops 0.75 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale persist set true @s"
+      }
+    ]
+  },
+  "entity_action_lost": {
+    "type": "origins:execute_command",
+    "command": "scale reset @s"
+  },
+  "entity_action_respawned": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:height 0.665 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:width 0.665 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:drops 0.75 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale persist set true @s"
+      }
+    ]
+  },
+  "execute_chosen_when_orb": true
+}
