@@ -1,6 +1,6 @@
 {
 	"name": "Looks Armorless",
-	"description": "You appear to not wear any armour.",
+	"description": "You appear to not wear any armor.",
 	"type": "origins:prevent_feature_render",
 	"features": [
 		"armor"

@@ -1,0 +1,21 @@
+{
+	"type": "origins:multiple",
+	"name": "A \"WEAP0n\" OF MY OWN_",
+	"description": "You start with a very durable shield.",
+	"items": {
+		"type": "origins:starting_equipment",
+		"stack": {
+			"item": "minecraft:shield",
+			"amount": 1,
+			"tag": "{display: {Name: '{\"text\": \"Trash Lid\", \"color\": \"yellow\", \"italic\": false}'}, HideFlags:4, Unbreakable:1, lukaruTrashShield: 1b}",
+			"slot": 8
+		}
+	},
+	"keepinv": {
+		"type": "origins:keep_inventory",
+		"item_condition": {
+			"type": "origins:nbt",
+			"nbt": "{lukaruTrashShield: 1b}"
+		}
+	}
+}

@@ -1,7 +1,7 @@
 {
 	"type": "origins:multiple",
 	"name": "Upgrade",
-	"description": "You can spend 20 levels for an upgrade.\nMax health will be increased every upgrade, up to +15.\n\nYou have slower movement speed under upgrade level 5.\nAt upgrade levels 10 and 15, you get a movement speed boost.",
+	"description": "You can spend 20 levels for an upgrade.\nMax health will be increased every upgrade, up to +15.\n\nYou have slower movement speed under upgrade level 5.\nAbove upgrade levels 10 and 15, you get a movement speed boost.",
 	"upgradelevel": {
 		"type": "origins:resource",
 		"min": 0,
@@ -201,7 +201,7 @@
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.movement_speed",
-			"value": 0.1,
+			"value": 0.15,
 			"operation": "multiply_base"
 		},
 		"condition": {
@@ -215,7 +215,7 @@
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.movement_speed",
-			"value": 0.1,
+			"value": 0.15,
 			"operation": "multiply_base"
 		},
 		"condition": {

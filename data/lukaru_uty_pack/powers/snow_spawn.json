@@ -1,7 +1,7 @@
 {
 	"type": "origins:modify_player_spawn",
 	"name": "Snowed In",
-	"description": "You spawn in a Snowy Taiga Biome.",
+	"description": "You spawn in a Snowy Taiga biome.",
 	"dimension": "minecraft:overworld",
 	"biome": "minecraft:snowy_taiga"
 }
