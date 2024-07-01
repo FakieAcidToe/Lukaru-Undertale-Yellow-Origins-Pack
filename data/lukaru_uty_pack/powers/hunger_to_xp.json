@@ -1,6 +1,6 @@
 {
 	"type": "origins:multiple",
-	"name": "EXP Hunger Bar",
+	"name": "EXP Fuel Gauge",
 	"description": "You don't have a usable hunger bar. Food consumed is directly converted to EXP.",
 	"badges": [
 		{

@@ -1,7 +1,7 @@
 {
 	"type": "origins:multiple",
 	"name": "Upgrade",
-	"description": "You can spend 20 levels for an upgrade. Max health will be increased every upgrade, up to +15.",
+	"description": "You can spend 20 levels for an upgrade.\nMax health will be increased every upgrade, up to +15.\n\nYou have slower movement speed under upgrade level 5.\nAt upgrade levels 10 and 15, you get a movement speed boost.",
 	"upgradelevel": {
 		"type": "origins:resource",
 		"min": 0,
@@ -55,7 +55,7 @@
 					"type": "origins:resource",
 					"resource": "lukaru_uty_pack:robot_upgrade_resolveupgrade",
 					"comparison": "==",
-					"compare_to": 400
+					"compare_to": 300
 				},
 				{
 					"type": "origins:resource",
@@ -88,14 +88,14 @@
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_resolveupgrade",
 			"comparison": "<",
-			"compare_to": 400
+			"compare_to": 300
 		}
 	},
 	"resolveupgrade": {
 		"type": "origins:resource",
 		"min": 0,
-		"max": 400,
-		"start_value": 400,
+		"max": 300,
+		"start_value": 300,
 		"max_action": {
 			"type": "origins:change_resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
@@ -108,7 +108,7 @@
 				"type": "origins:resource",
 				"resource": "lukaru_uty_pack:robot_upgrade_resolveupgrade",
 				"comparison": "<",
-				"compare_to": 400
+				"compare_to": 300
 			}
 		}
 	},
@@ -124,232 +124,339 @@
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_resolveupgrade",
 			"comparison": "<",
-			"compare_to": 400
+			"compare_to": 300
+		}
+	},
+	"slower1": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"value": -0.1,
+			"operation": "multiply_base"
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
+			"comparison": "<",
+			"compare_to": 1
+		}
+	},
+	"slower2": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"value": -0.1,
+			"operation": "multiply_base"
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
+			"comparison": "<",
+			"compare_to": 2
+		}
+	},
+	"slower3": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"value": -0.1,
+			"operation": "multiply_base"
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
+			"comparison": "<",
+			"compare_to": 3
+		}
+	},
+	"slower4": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"value": -0.1,
+			"operation": "multiply_base"
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
+			"comparison": "<",
+			"compare_to": 4
+		}
+	},
+	"slower5": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"value": -0.1,
+			"operation": "multiply_base"
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
+			"comparison": "<",
+			"compare_to": 5
+		}
+	},
+	"faster1": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"value": 0.1,
+			"operation": "multiply_base"
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
+			"comparison": ">=",
+			"compare_to": 10
+		}
+	},
+	"faster2": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"value": 0.1,
+			"operation": "multiply_base"
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
+			"comparison": ">=",
+			"compare_to": 15
+		}
+	},
+	"addhealth0": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.max_health",
+			"value": 30.0,
+			"operation": "addition",
+			"update_health": false
 		}
 	},
 	"addhealth1": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 0
+			"comparison": "<",
+			"compare_to": 1
 		}
 	},
 	"addhealth2": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 1
+			"comparison": "<",
+			"compare_to": 2
 		}
 	},
 	"addhealth3": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 2
+			"comparison": "<",
+			"compare_to": 3
 		}
 	},
 	"addhealth4": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 3
+			"comparison": "<",
+			"compare_to": 4
 		}
 	},
 	"addhealth5": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 4
+			"comparison": "<",
+			"compare_to": 5
 		}
 	},
 	"addhealth6": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 5
+			"comparison": "<",
+			"compare_to": 6
 		}
 	},
 	"addhealth7": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 6
+			"comparison": "<",
+			"compare_to": 7
 		}
 	},
 	"addhealth8": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 7
+			"comparison": "<",
+			"compare_to": 8
 		}
 	},
 	"addhealth9": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 8
+			"comparison": "<",
+			"compare_to": 9
 		}
 	},
 	"addhealth10": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 9
+			"comparison": "<",
+			"compare_to": 10
 		}
 	},
 	"addhealth11": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 10
+			"comparison": "<",
+			"compare_to": 11
 		}
 	},
 	"addhealth12": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 11
+			"comparison": "<",
+			"compare_to": 12
 		}
 	},
 	"addhealth13": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 12
+			"comparison": "<",
+			"compare_to": 13
 		}
 	},
 	"addhealth14": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 13
+			"comparison": "<",
+			"compare_to": 14
 		}
 	},
 	"addhealth15": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 2.0,
+			"value": -2.0,
 			"operation": "addition",
 			"update_health": false
 		},
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
-			"comparison": ">",
-			"compare_to": 14
+			"comparison": "<",
+			"compare_to": 15
 		}
 	}
 }
