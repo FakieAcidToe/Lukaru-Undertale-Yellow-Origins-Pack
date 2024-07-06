@@ -3,12 +3,84 @@
 	"name": "Smite",
 	"description": "You can summon lightning at any location you can see.",
 	"cooldown": {
-		"type": "origins:cooldown",
-		"cooldown": 100,
+		"type": "origins:resource",
+		"min": 0,
+		"max": 200,
 		"hud_render": {
 			"sprite_location": "origins:textures/gui/resource_bar.png",
-			"bar_index": 2
+			"bar_index": 2,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "lukaru_uty_pack:summon_lightning_cooldown",
+				"comparison": ">",
+				"compare_to": 0
+			}
+		},
+		"start_value": 0
+	},
+	"reload": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:if_else",
+					"condition": {
+						"type": "origins:resource",
+						"resource": "lukaru_uty_pack:summon_lightning_cooldown",
+						"comparison": "<",
+						"compare_to": 200
+					},
+					"if_action": {
+						"type": "origins:change_resource",
+						"resource": "lukaru_uty_pack:summon_lightning_cooldown",
+						"change": 1
+					}
+				},
+				{
+					"type": "origins:if_else",
+					"condition": {
+						"type": "origins:resource",
+						"resource": "lukaru_uty_pack:summon_lightning_cooldown",
+						"comparison": "==",
+						"compare_to": 200
+					},
+					"if_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "lukaru_uty_pack:summon_lightning_cooldown",
+								"operation": "set",
+								"change": 0
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "lukaru_uty_pack:summon_lightning_ammo",
+								"change": 1
+							}
+						]
+					}
+				}
+			]
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "lukaru_uty_pack:summon_lightning_ammo",
+			"comparison": "<",
+			"compare_to": 3
 		}
+	},
+	"ammo": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 7,
+		"hud_render": {
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_points_01.png",
+			"bar_index": 6
+		},
+		"start_value": 3
 	},
 	"smite": {
 		"type": "origins:active_self",
@@ -22,8 +94,9 @@
 			"command_at_hit": "summon minecraft:lightning_bolt ~ ~ ~",
 			"command_step": 1,
 			"hit_action": {
-				"type": "origins:trigger_cooldown",
-				"power": "lukaru_uty_pack:summon_lightning_cooldown"
+				"type": "origins:change_resource",
+				"resource": "lukaru_uty_pack:summon_lightning_ammo",
+				"change": -1
 			}
 		},
 		"key": {
@@ -32,8 +105,8 @@
 		},
 		"condition": {
 			"type": "origins:resource",
-			"resource": "lukaru_uty_pack:summon_lightning_cooldown",
-			"comparison": "==",
+			"resource": "lukaru_uty_pack:summon_lightning_ammo",
+			"comparison": ">",
 			"compare_to": 0
 		}
 	}

@@ -1,0 +1,84 @@
+{
+  "name": "Micro",
+  "description": "You are extremely tiny and you can jump 2 blocks high.",
+  "type": "origins:action_on_callback",
+  "entity_action_chosen": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:height 0.1 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:width 0.1 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:motion 0.75 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:jump_height 1.55 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:step_height 0.5 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:held_item 1.2 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:third_person 2 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale persist set true @s"
+      }
+    ]
+  },
+  "entity_action_lost": {
+    "type": "origins:execute_command",
+    "command": "scale reset @s"
+  },
+  "entity_action_respawned": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:height 0.1 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:width 0.1 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:motion 0.75 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:jump_height 1.55 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:step_height 0.5 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:held_item 1.2 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:third_person 2 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale persist set true @s"
+      }
+    ]
+  },
+  "execute_chosen_when_orb": true
+}

@@ -1,7 +1,7 @@
 {
 	"type": "origins:multiple",
 	"name": "Bulky",
-	"description": "You move slower but have 3 more hearts.",
+	"description": "You move slower but have 5 more hearts.",
 	"slower": {
 		"type": "origins:attribute",
 		"modifier": {
@@ -14,7 +14,7 @@
 		"type": "origins:attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"value": 6.0,
+			"value": 10.0,
 			"operation": "addition"
 		}
 	}
