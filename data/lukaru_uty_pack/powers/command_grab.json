@@ -81,5 +81,26 @@
 				}
 			]
 		}
+	},
+	"pose": {
+		"type": "origins:pose",
+		"arm_pose": "throw_spear",
+		"condition": {
+			"type": "origins:passenger"
+		}
+	},
+	"callback": {
+		"type": "origins:action_on_callback",
+		"entity_action_removed": {
+			"type": "origins:passenger_action",
+			"action": {
+				"type": "origins:dismount"
+			},
+			"recursive": false
+		},
+		"execute_chosen_when_orb": false,
+		"condition": {
+			"type": "origins:passenger"
+		}
 	}
 }

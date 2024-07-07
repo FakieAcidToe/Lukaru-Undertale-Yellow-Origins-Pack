@@ -142,5 +142,15 @@
 			"comparison": "==",
 			"compare_to": 1
 		}
+	},
+	"pose": {
+		"type": "origins:pose",
+		"arm_pose": "spyglass",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "lukaru_uty_pack:revolver_fire",
+			"comparison": ">",
+			"compare_to": 0
+		}
 	}
 }

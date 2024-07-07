@@ -1,45 +1,58 @@
 {
-	"type": "origins:active_self",
+	"type": "origins:multiple",
 	"name": "Air Dash",
 	"description": "Every 5 seconds, you can dash in the direction you're looking.",
-	"cooldown": 100,
-	"hud_render": {
-		"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
-		"bar_index": 20
-	},
-	"entity_action": {
-		"type": "origins:and",
-		"actions": [
-			{
-				"type": "origins:play_sound",
-				"sound": "entity.fox.ambient",
-				"volume": 1.5
-			},
-			{
-				"type": "origins:add_velocity",
-				"z": 1,
-				"space": "local",
-				"set": true
-			},
-			{
-				"type": "origins:spawn_particles",
-				"particle": {
-					"type": "minecraft:cherry_leaves"
+	"dash": {
+		"type": "origins:active_self",
+		"cooldown": 100,
+		"hud_render": {
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 20
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "entity.fox.ambient",
+					"volume": 1.5
 				},
-				"count": 64,
-				"speed": 0.1,
-				"force": true,
-				"spread": {
-					"x": 2.0,
-					"y": 2.0,
-					"z": 2.0
+				{
+					"type": "origins:add_velocity",
+					"z": 1,
+					"space": "local",
+					"set": true
 				},
-				"offset_y": 1
-			}
-		]
+				{
+					"type": "origins:spawn_particles",
+					"particle": {
+						"type": "minecraft:cherry_leaves"
+					},
+					"count": 64,
+					"speed": 0.1,
+					"force": true,
+					"spread": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					},
+					"offset_y": 1
+				}
+			]
+		},
+		"key": {
+			"key": "key.origins.primary_active",
+			"continuous": true
+		}
 	},
-	"key": {
-		"key": "key.origins.primary_active",
-		"continuous": true
+	"pose": {
+		"type": "origins:pose",
+		"entity_pose": "fall_flying",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_dash",
+			"comparison": ">",
+			"compare_to": 96
+		}
 	}
 }

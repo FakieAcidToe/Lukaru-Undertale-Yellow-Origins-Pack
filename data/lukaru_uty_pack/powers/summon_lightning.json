@@ -94,9 +94,18 @@
 			"command_at_hit": "summon minecraft:lightning_bolt ~ ~ ~",
 			"command_step": 1,
 			"hit_action": {
-				"type": "origins:change_resource",
-				"resource": "lukaru_uty_pack:summon_lightning_ammo",
-				"change": -1
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"resource": "lukaru_uty_pack:summon_lightning_ammo",
+						"change": -1
+					},
+					{
+						"type": "origins:trigger_cooldown",
+						"power": "*:*_posecooldown"
+					}
+				]
 			}
 		},
 		"key": {
@@ -106,6 +115,20 @@
 		"condition": {
 			"type": "origins:resource",
 			"resource": "lukaru_uty_pack:summon_lightning_ammo",
+			"comparison": ">",
+			"compare_to": 0
+		}
+	},
+	"posecooldown": {
+		"type": "origins:cooldown",
+		"cooldown": 8
+	},
+	"pose": {
+		"type": "origins:pose",
+		"arm_pose": "throw_spear",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_posecooldown",
 			"comparison": ">",
 			"compare_to": 0
 		}

@@ -1,50 +1,63 @@
 {
-	"type": "origins:active_self",
+	"type": "origins:multiple",
 	"name": "Air Dash",
 	"description": "Every 5 seconds, you can dash in the direction you're looking.",
-	"cooldown": 100,
-	"hud_render": {
-		"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
-		"bar_index": 20
-	},
-	"entity_action": {
-		"type": "origins:and",
-		"actions": [
-			{
-				"type": "origins:play_sound",
-				"sound": "entity.firework_rocket.shoot",
-				"volume": 1.5,
-				"pitch": 1.65
-			},
-			{
-				"type": "origins:add_velocity",
-				"z": 1,
-				"space": "local",
-				"set": true
-			},
-			{
-				"type": "origins:spawn_particles",
-				"particle": {
-					"type": "minecraft:wax_on"
+	"dash": {
+		"type": "origins:active_self",
+		"cooldown": 100,
+		"hud_render": {
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 20
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "entity.firework_rocket.shoot",
+					"volume": 1.5,
+					"pitch": 1.65
 				},
-				"count": 64,
-				"speed": 0.1,
-				"force": true,
-				"spread": {
-					"x": 2.0,
-					"y": 1.0,
-					"z": 2.0
+				{
+					"type": "origins:add_velocity",
+					"z": 1,
+					"space": "local",
+					"set": true
 				},
-				"offset_y": 1
-			}
-		]
+				{
+					"type": "origins:spawn_particles",
+					"particle": {
+						"type": "minecraft:wax_on"
+					},
+					"count": 64,
+					"speed": 0.1,
+					"force": true,
+					"spread": {
+						"x": 2.0,
+						"y": 1.0,
+						"z": 2.0
+					},
+					"offset_y": 1
+				}
+			]
+		},
+		"key": {
+			"key": "key.origins.secondary_active",
+			"continuous": true
+		},
+		"condition": {
+			"type": "origins:sneaking",
+			"inverted": true
+		}
 	},
-	"key": {
-		"key": "key.origins.secondary_active",
-		"continuous": true
-	},
-	"condition": {
-		"type": "origins:sneaking",
-		"inverted": true
+	"pose": {
+		"type": "origins:pose",
+		"entity_pose": "fall_flying",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_dash",
+			"comparison": ">",
+			"compare_to": 96
+		}
 	}
 }
