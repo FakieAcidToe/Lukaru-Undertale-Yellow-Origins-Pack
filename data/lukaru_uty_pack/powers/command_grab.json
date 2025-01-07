@@ -43,7 +43,7 @@
 				{
 					"type": "origins:passenger",
 					"comparison": "<=",
-					"compare_to": "0"
+					"compare_to": 0
 				}
 			]
 		}
@@ -56,16 +56,24 @@
 		},
 		"entity_action": {
 			"type": "origins:passenger_action",
-			"action": {
-				"type": "origins:dismount"
-			},
 			"bientity_action": {
-				"type": "origins:invert",
-				"action": {
-					"type": "origins:add_velocity",
-					"y": -1.5,
-					"z": 0.5
-				}
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:actor_action",
+						"action": {
+							"type": "origins:dismount"
+						}
+					},
+					{
+						"type": "origins:invert",
+						"action": {
+							"type": "origins:add_velocity",
+							"y": -1.5,
+							"z": 0.5
+						}
+					}
+				]
 			},
 			"recursive": false
 		},
@@ -77,7 +85,9 @@
 					"inverted": true
 				},
 				{
-					"type": "origins:passenger"
+					"type": "origins:passenger",
+					"comparison": ">=",
+					"compare_to": 1
 				}
 			]
 		}
@@ -86,21 +96,28 @@
 		"type": "origins:pose",
 		"arm_pose": "throw_spear",
 		"condition": {
-			"type": "origins:passenger"
+			"type": "origins:passenger",
+			"comparison": ">=",
+			"compare_to": 1
 		}
 	},
 	"callback": {
 		"type": "origins:action_on_callback",
 		"entity_action_removed": {
 			"type": "origins:passenger_action",
-			"action": {
-				"type": "origins:dismount"
+			"bientity_action": {
+				"type": "origins:actor_action",
+				"action": {
+					"type": "origins:dismount"
+				}
 			},
 			"recursive": false
 		},
 		"execute_chosen_when_orb": false,
 		"condition": {
-			"type": "origins:passenger"
+			"type": "origins:passenger",
+			"comparison": ">=",
+			"compare_to": 1
 		}
 	}
 }

@@ -3,13 +3,13 @@
 	"name": "Frail Wings",
 	"description": "You break blocks 50% slower than usual when not holding tools.",
 	"modifier": {
-		"operation": "multiply_base",
-		"value": -0.5
+		"operation": "apoli:multiply_base_additive",
+		"amount": -0.5
 	},
 	"hardness_modifiers": [
 		{
 			"operation": "min_total",
-			"value": 0.1
+			"amount": 0.1
 		}
 	],
 	"condition": {
@@ -18,7 +18,7 @@
 		"item_condition": {
 			"type": "origins:ingredient",
 			"ingredient": {
-				"tag": "minecraft:tools"
+				"tag": "minecraft:breaks_decorated_pots"
 			}
 		},
 		"inverted": true

@@ -30,7 +30,7 @@
 								"element": {
 									"type": "origins:give",
 									"stack": {
-										"item": "minecraft:diamond",
+										"id": "minecraft:diamond",
 										"amount": 1
 									},
 									"preferred_slot": "mainhand"
@@ -41,7 +41,7 @@
 								"element": {
 									"type": "origins:give",
 									"stack": {
-										"item": "minecraft:emerald",
+										"id": "minecraft:emerald",
 										"amount": 1
 									},
 									"preferred_slot": "mainhand"
@@ -52,7 +52,7 @@
 								"element": {
 									"type": "origins:give",
 									"stack": {
-										"item": "minecraft:gold_ingot",
+										"id": "minecraft:gold_ingot",
 										"amount": 1
 									},
 									"preferred_slot": "mainhand"
@@ -63,7 +63,7 @@
 								"element": {
 									"type": "origins:give",
 									"stack": {
-										"item": "minecraft:gold_nugget",
+										"id": "minecraft:gold_nugget",
 										"amount": 3
 									},
 									"preferred_slot": "mainhand"
@@ -74,7 +74,7 @@
 								"element": {
 									"type": "origins:give",
 									"stack": {
-										"item": "minecraft:iron_ingot",
+										"id": "minecraft:iron_ingot",
 										"amount": 1
 									},
 									"preferred_slot": "mainhand"
@@ -85,7 +85,7 @@
 								"element": {
 									"type": "origins:give",
 									"stack": {
-										"item": "minecraft:iron_nugget",
+										"id": "minecraft:iron_nugget",
 										"amount": 3
 									},
 									"preferred_slot": "mainhand"

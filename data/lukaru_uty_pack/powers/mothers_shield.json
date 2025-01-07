@@ -20,7 +20,7 @@
 		"type": "origins:modify_damage_taken",
 		"modifier": {
 			"operation": "set_total",
-			"value": 0
+			"amount": 0
 		},
 		"condition": {
 			"type": "origins:resource",

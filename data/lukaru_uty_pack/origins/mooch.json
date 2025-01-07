@@ -8,7 +8,9 @@
 		"origins:light_armor",
 		"origins:nine_lives"
 	],
-	"icon": "minecraft:gold_nugget",
+	"icon": {
+		"id": "minecraft:gold_nugget"
+	},
 	"impact": 2,
 	"name": "Mooch",
 	"description": "* :)"

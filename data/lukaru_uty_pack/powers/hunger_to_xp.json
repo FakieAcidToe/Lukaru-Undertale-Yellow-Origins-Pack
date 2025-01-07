@@ -21,7 +21,7 @@
 		"type": "origins:modify_exhaustion",
 		"modifier": {
 			"operation": "set_base",
-			"value": 0
+			"amount": 0
 		}
 	},
 	"hungertoxpconverter": {
@@ -35,7 +35,7 @@
 				},
 				{
 					"type": "origins:feed",
-					"food": -1,
+					"nutrition": -1,
 					"saturation": 0
 				}
 			]
@@ -51,7 +51,7 @@
 		"type": "origins:action_over_time",
 		"entity_action": {
 			"type": "origins:feed",
-			"food": 1,
+			"nutrition": 1,
 			"saturation": 0
 		},
 		"interval": 1,

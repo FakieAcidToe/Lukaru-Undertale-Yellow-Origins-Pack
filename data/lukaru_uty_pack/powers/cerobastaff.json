@@ -6,10 +6,22 @@
 		"type": "origins:starting_equipment",
 		"stacks": [
 			{
-				"item": "minecraft:trident",
-				"amount": 1,
-				"tag": "{display: {Name: '{\"text\": \"Ketsukane Staff\", \"color\": \"yellow\", \"italic\": false}'}, Enchantments:[{lvl:3,id:loyalty}], HideFlags:4, Unbreakable:1, lukaruBlossom: 1b}",
-				"slot": 8
+				"id": "minecraft:trident",
+				"count": 1,
+				"slot": 8,
+				"components": {
+					"minecraft:custom_name": "{\"text\": \"Ketsukane Staff\", \"color\": \"yellow\", \"italic\": false}",
+					"minecraft:enchantment_glint_override": false,
+					"minecraft:enchantments": {
+						"loyalty": 3
+					},
+					"minecraft:unbreakable": {
+						"show_in_tooltip": false
+					},
+					"minecraft:custom_data":{
+						"lukaruBlossom": true
+					}
+				}
 			}
 		]
 	},
@@ -37,7 +49,7 @@
 					"type": "origins:equipped_item",
 					"equipment_slot": "mainhand",
 					"item_condition": {
-						"type": "origins:nbt",
+						"type": "origins:custom_data",
 						"nbt": "{lukaruBlossom: 1b}"
 					}
 				},
@@ -45,7 +57,7 @@
 					"type": "origins:equipped_item",
 					"equipment_slot": "offhand",
 					"item_condition": {
-						"type": "origins:nbt",
+						"type": "origins:custom_data",
 						"nbt": "{lukaruBlossom: 1b}"
 					}
 				}
@@ -55,7 +67,7 @@
 	"keepinv": {
 		"type": "origins:keep_inventory",
 		"item_condition": {
-			"type": "origins:nbt",
+			"type": "origins:custom_data",
 			"nbt": "{lukaruBlossom: 1b}"
 		}
 	}

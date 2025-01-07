@@ -9,7 +9,9 @@
 		"origins:more_exhaustion",
 		"lukaru_uty_pack:scale_roba"
 	],
-	"icon": "minecraft:sweet_berries",
+	"icon": {
+		"id": "minecraft:sweet_berries"
+	},
 	"impact": 2,
 	"name": "Ceroba",
 	"description": "* A legacy not to be forgotten."

@@ -8,7 +8,9 @@
 		"lukaru_uty_pack:frail_wings",
 		"lukaru_uty_pack:woodworker"
 	],
-	"icon": "minecraft:feather",
+	"icon": {
+		"id": "minecraft:feather"
+	},
 	"impact": 2,
 	"name": "Martlet",
 	"description": "* A little scatterbrained."

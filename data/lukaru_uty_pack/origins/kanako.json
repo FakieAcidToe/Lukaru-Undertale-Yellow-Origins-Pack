@@ -11,7 +11,9 @@
 		"lukaru_uty_pack:looks_armorless",
 		"lukaru_uty_pack:scale_kako"
 	],
-	"icon": "minecraft:sweet_berries",
+	"icon": {
+		"id": "minecraft:sweet_berries"
+	},
 	"impact": 2,
 	"name": "Kanako",
 	"description": "* Love you lots!"

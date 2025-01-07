@@ -5,16 +5,25 @@
 	"items": {
 		"type": "origins:starting_equipment",
 		"stack": {
-			"item": "minecraft:shield",
+			"id": "minecraft:shield",
 			"amount": 1,
-			"tag": "{display: {Name: '{\"text\": \"Trash Lid\", \"color\": \"yellow\", \"italic\": false}'}, HideFlags:4, Unbreakable:1, lukaruTrashShield: 1b}",
-			"slot": 8
+			"slot": 8,
+			"components": {
+				"minecraft:custom_name": "{\"text\": \"Trash Lid\", \"color\": \"yellow\", \"italic\": false}",
+				"minecraft:enchantment_glint_override": false,
+				"minecraft:unbreakable": {
+					"show_in_tooltip": false
+				},
+				"minecraft:custom_data":{
+					"lukaruTrashShield": true
+				}
+			}
 		}
 	},
 	"keepinv": {
 		"type": "origins:keep_inventory",
 		"item_condition": {
-			"type": "origins:nbt",
+			"type": "origins:custom_data",
 			"nbt": "{lukaruTrashShield: 1b}"
 		}
 	}

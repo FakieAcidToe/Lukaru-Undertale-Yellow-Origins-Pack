@@ -3,8 +3,9 @@
 	"name": "Low Power",
 	"description": "You start with 5 less hearts of health than the average human.",
 	"modifier": {
+		"id": "lukaru_uty_pack:5_less_hearts",
 		"attribute": "minecraft:generic.max_health",
-		"value": -10.0,
-		"operation": "addition"
+		"amount": -10.0,
+		"operation": "add_value"
 	}
 }

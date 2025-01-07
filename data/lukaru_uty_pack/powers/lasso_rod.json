@@ -4,10 +4,16 @@
 	"description": "You start with a durable Lasso Fishing Rod.\nIt's lassoin' time!",
 	"stacks": [
 		{
-			"item": "minecraft:fishing_rod",
-			"amount": 1,
-			"tag": "{display: {Name: '{\"text\": \"The Lasso\", \"color\": \"yellow\", \"italic\": false}'}, HideFlags:4, Unbreakable:1}",
-			"slot": 8
+			"id": "minecraft:fishing_rod",
+			"count": 1,
+			"slot": 8,
+			"components": {
+				"minecraft:custom_name": "{\"text\": \"The Lasso\", \"color\": \"yellow\", \"italic\": false}",
+				"minecraft:enchantment_glint_override": false,
+				"minecraft:unbreakable": {
+					"show_in_tooltip": false
+				}
+			}
 		}
 	]
 }

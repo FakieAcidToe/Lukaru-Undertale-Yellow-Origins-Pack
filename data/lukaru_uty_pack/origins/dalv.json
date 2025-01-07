@@ -8,7 +8,9 @@
 		"origins:vegetarian",
 		"origins:fragile"
 	],
-	"icon": "minecraft:bat_spawn_egg",
+	"icon": {
+		"id": "minecraft:bat_spawn_egg"
+	},
 	"impact": 2,
 	"name": "Dalv",
 	"description": "Just wants to be left alone..."

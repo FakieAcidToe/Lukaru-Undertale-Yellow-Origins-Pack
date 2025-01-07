@@ -3,9 +3,9 @@
 	"name": "LV 1",
 	"description": "You have 2 less hearts of health than the average human.",
 	"modifier": {
-		"name": "LV 1 health reduction",
+		"id": "lukaru_uty_pack:lv1_health_reduction",
 		"attribute": "minecraft:generic.max_health",
-		"value": -4.0,
-		"operation": "addition"
+		"amount": -4.0,
+		"operation": "add_value"
 	}
 }

@@ -9,7 +9,9 @@
 		"lukaru_uty_pack:looks_armorless",
 		"lukaru_uty_pack:scale_kako"
 	],
-	"icon": "minecraft:gunpowder",
+	"icon": {
+		"id": "minecraft:gunpowder"
+	},
 	"impact": 2,
 	"name": "Clover",
 	"description": "Justice..."

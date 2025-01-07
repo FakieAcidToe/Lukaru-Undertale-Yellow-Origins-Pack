@@ -5,7 +5,9 @@
 		"lukaru_uty_pack:strong_arms",
 		"lukaru_uty_pack:bulky"
 	],
-	"icon": "minecraft:clay_ball",
+	"icon": {
+		"id": "minecraft:clay_ball"
+	},
 	"impact": 2,
 	"name": "Ed",
 	"description": "The toughest of the four."

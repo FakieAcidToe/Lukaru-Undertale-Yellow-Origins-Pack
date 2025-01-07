@@ -7,13 +7,13 @@
 	"duration_per_stack": 20,
 	"effects": [
 		{
-			"effect": "minecraft:strength",
+			"id": "minecraft:strength",
 			"is_ambient": true,
 			"show_particles": false,
 			"show_icon": true
 		},
 		{
-			"effect": "minecraft:speed",
+			"id": "minecraft:speed",
 			"is_ambient": true,
 			"show_particles": false,
 			"show_icon": true

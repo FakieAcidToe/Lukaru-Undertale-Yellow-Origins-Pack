@@ -3,7 +3,7 @@
 	"name": "Scatterbrained",
 	"description": "Gain 50% less XP.",
 	"modifier": {
-		"operation": "multiply_base",
-		"value": 0.5
+		"operation": "multiply_base_additive",
+		"amount": 0.5
 	}
 }

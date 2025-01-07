@@ -7,88 +7,88 @@
 		"type": "origins:modify_crafting",
 		"recipe": "minecraft:acacia_planks",
 		"result": {
-			"item": "minecraft:acacia_planks",
-			"amount": 6
+			"id": "minecraft:acacia_planks",
+			"count": 6
 		}
 	},
 	"birch": {
 		"type": "origins:modify_crafting",
 		"recipe": "minecraft:birch_planks",
 		"result": {
-			"item": "minecraft:birch_planks",
-			"amount": 6
+			"id": "minecraft:birch_planks",
+			"count": 6
 		}
 	},
 	"dark_oak": {
 		"type": "origins:modify_crafting",
 		"recipe": "minecraft:dark_oak_planks",
 		"result": {
-			"item": "minecraft:dark_oak_planks",
-			"amount": 6
+			"id": "minecraft:dark_oak_planks",
+			"count": 6
 		}
 	},
 	"jungle": {
 		"type": "origins:modify_crafting",
 		"recipe": "minecraft:jungle_planks",
 		"result": {
-			"item": "minecraft:jungle_planks",
-			"amount": 6
+			"id": "minecraft:jungle_planks",
+			"count": 6
 		}
 	},
 	"oak": {
 		"type": "origins:modify_crafting",
 		"recipe": "minecraft:oak_planks",
 		"result": {
-			"item": "minecraft:oak_planks",
-			"amount": 6
+			"id": "minecraft:oak_planks",
+			"count": 6
 		}
 	},
 	"spruce": {
 		"type": "origins:modify_crafting",
 		"recipe": "minecraft:spruce_planks",
 		"result": {
-			"item": "minecraft:spruce_planks",
-			"amount": 6
+			"id": "minecraft:spruce_planks",
+			"count": 6
 		}
 	},
 	"mangrove": {
 		"type": "origins:modify_crafting",
 		"recipe": "minecraft:mangrove_planks",
 		"result": {
-			"item": "minecraft:mangrove_planks",
-			"amount": 6
+			"id": "minecraft:mangrove_planks",
+			"count": 6
 		}
 	},
 	"cherry": {
 		"type": "origins:modify_crafting",
 		"recipe": "minecraft:cherry_planks",
 		"result": {
-			"item": "minecraft:cherry_planks",
-			"amount": 6
+			"id": "minecraft:cherry_planks",
+			"count": 6
 		}
 	},
 	"bamboo": {
 		"type": "origins:modify_crafting",
 		"recipe": "minecraft:bamboo_planks",
 		"result": {
-			"item": "minecraft:bamboo_planks",
-			"amount": 6
+			"id": "minecraft:bamboo_planks",
+			"count": 6
 		}
 	},
 	"crimson": {
 		"type": "origins:modify_crafting",
 		"recipe": "minecraft:crimson_planks",
 		"result": {
-			"item": "minecraft:crimson_planks",
-			"amount": 6
+			"id": "minecraft:crimson_planks",
+			"count": 6
 		}
 	},
 	"warped": {
 		"type": "origins:modify_crafting",
 		"recipe": "minecraft:warped_planks",
 		"result": {
-			"item": "minecraft:warped_planks",
-			"amount": 6
+			"id": "minecraft:warped_planks",
+			"count": 6
 		}
 	}
 }

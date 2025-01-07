@@ -17,7 +17,7 @@
 				"resource": "lukaru_uty_pack:robot_upgrade_upgradelevel",
 				"modifier": {
 					"operation": "add_base_early",
-					"value": -1
+					"amount": -1
 				}
 			}
 		}
@@ -36,7 +36,7 @@
 					"resource": "lukaru_uty_pack:robot_upgrade_resolveupgrade",
 					"modifier": {
 						"operation": "set_base",
-						"value": 0
+						"amount": 0
 					}
 				},
 				{
@@ -78,7 +78,7 @@
 		"duration_per_stack": 2,
 		"tick_rate": 1,
 		"effect": {
-			"effect": "minecraft:slowness",
+			"id": "minecraft:slowness",
 			"amplifier": 5,
 			"is_ambient": true,
 			"show_particles": false,
@@ -130,9 +130,10 @@
 	"slower1": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:slower_1",
 			"attribute": "minecraft:generic.movement_speed",
-			"value": -0.1,
-			"operation": "multiply_base"
+			"amount": -0.1,
+			"operation": "add_multiplied_base"
 		},
 		"condition": {
 			"type": "origins:resource",
@@ -144,9 +145,10 @@
 	"slower2": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:slower_2",
 			"attribute": "minecraft:generic.movement_speed",
-			"value": -0.1,
-			"operation": "multiply_base"
+			"amount": -0.1,
+			"operation": "add_multiplied_base"
 		},
 		"condition": {
 			"type": "origins:resource",
@@ -158,9 +160,10 @@
 	"slower3": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:slower_3",
 			"attribute": "minecraft:generic.movement_speed",
-			"value": -0.1,
-			"operation": "multiply_base"
+			"amount": -0.1,
+			"operation": "add_multiplied_base"
 		},
 		"condition": {
 			"type": "origins:resource",
@@ -172,9 +175,10 @@
 	"slower4": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:slower_4",
 			"attribute": "minecraft:generic.movement_speed",
-			"value": -0.1,
-			"operation": "multiply_base"
+			"amount": -0.1,
+			"operation": "add_multiplied_base"
 		},
 		"condition": {
 			"type": "origins:resource",
@@ -186,9 +190,10 @@
 	"slower5": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:slower_5",
 			"attribute": "minecraft:generic.movement_speed",
-			"value": -0.1,
-			"operation": "multiply_base"
+			"amount": -0.1,
+			"operation": "add_multiplied_base"
 		},
 		"condition": {
 			"type": "origins:resource",
@@ -200,9 +205,10 @@
 	"faster1": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:faster_1",
 			"attribute": "minecraft:generic.movement_speed",
-			"value": 0.15,
-			"operation": "multiply_base"
+			"amount": 0.15,
+			"operation": "add_multiplied_base"
 		},
 		"condition": {
 			"type": "origins:resource",
@@ -214,9 +220,10 @@
 	"faster2": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:faster_2",
 			"attribute": "minecraft:generic.movement_speed",
-			"value": 0.15,
-			"operation": "multiply_base"
+			"amount": 0.15,
+			"operation": "add_multiplied_base"
 		},
 		"condition": {
 			"type": "origins:resource",
@@ -228,18 +235,20 @@
 	"addhealth0": {
 		"type": "origins:attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_0",
 			"attribute": "minecraft:generic.max_health",
-			"value": 30.0,
-			"operation": "addition",
+			"amount": 30.0,
+			"operation": "add_value",
 			"update_health": false
 		}
 	},
 	"addhealth1": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_1",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {
@@ -252,9 +261,10 @@
 	"addhealth2": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_2",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {
@@ -267,9 +277,10 @@
 	"addhealth3": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_3",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {
@@ -282,9 +293,10 @@
 	"addhealth4": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_4",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {
@@ -297,9 +309,10 @@
 	"addhealth5": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_5",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {
@@ -312,9 +325,10 @@
 	"addhealth6": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_6",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {
@@ -327,9 +341,10 @@
 	"addhealth7": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_7",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {
@@ -342,9 +357,10 @@
 	"addhealth8": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_8",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {
@@ -357,9 +373,10 @@
 	"addhealth9": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_9",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {
@@ -372,9 +389,10 @@
 	"addhealth10": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_10",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {
@@ -387,9 +405,10 @@
 	"addhealth11": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_11",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {
@@ -402,9 +421,10 @@
 	"addhealth12": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_12",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {
@@ -417,9 +437,10 @@
 	"addhealth13": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_13",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {
@@ -432,9 +453,10 @@
 	"addhealth14": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_14",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {
@@ -447,9 +469,10 @@
 	"addhealth15": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"id": "lukaru_uty_pack:add_health_15",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
-			"operation": "addition",
+			"amount": -2.0,
+			"operation": "add_value",
 			"update_health": false
 		},
 		"condition": {

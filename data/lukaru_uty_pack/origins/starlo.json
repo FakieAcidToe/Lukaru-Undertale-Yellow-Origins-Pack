@@ -6,7 +6,9 @@
 		"lukaru_uty_pack:lasso_rod",
 		"origins:more_exhaustion"
 	],
-	"icon": "minecraft:firework_star",
+	"icon": {
+		"id": "minecraft:firework_star"
+	},
 	"impact": 2,
 	"name": "Starlo",
 	"description": "* The almighty sheriff."

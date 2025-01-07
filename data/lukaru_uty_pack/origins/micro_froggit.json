@@ -4,7 +4,9 @@
 		"origins:fall_immunity",
 		"lukaru_uty_pack:one_hp"
 	],
-	"icon": "minecraft:iron_nugget",
+	"icon": {
+		"id": "minecraft:iron_nugget"
+	},
 	"impact": 2,
 	"name": "Micro Froggit",
 	"description": "Often falls through the cracks.\n(Joke origin)"

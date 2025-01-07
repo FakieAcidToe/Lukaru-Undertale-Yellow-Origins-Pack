@@ -12,16 +12,52 @@
 		"type": "origins:starting_equipment",
 		"stacks": [
 			{
-				"item": "minecraft:leather_boots",
-				"amount": 1,
-				"tag": "{display: {color: 16498744, Name: '{\"text\": \"Snow Boots\", \"color\": \"yellow\", \"italic\": false}'}, Trim:{pattern:host,material:quartz}, Enchantments:[{lvl:4,id:feather_falling}], HideFlags:196, Unbreakable:1}",
-				"slot": 7
+				"id": "minecraft:leather_boots",
+				"count": 1,
+				"slot": 7,
+				"components": {
+					"minecraft:custom_name": "{\"text\": \"Snow Boots\", \"color\": \"yellow\", \"italic\": false}",
+					"minecraft:dyed_color": {
+						"rgb": 16498744,
+						"show_in_tooltip": false
+					},
+					"minecraft:enchantment_glint_override": false,
+					"minecraft:enchantments": {
+						"feather_falling": 4
+					},
+					"minecraft:trim": {
+						"pattern":"host",
+						"material":"quartz",
+						"show_in_tooltip": false
+					},
+					"minecraft:unbreakable": {
+						"show_in_tooltip": false
+					}
+				}
 			},
 			{
-				"item": "minecraft:written_book",
-				"amount": 1,
-				"tag": "{display: {Name: '{\"text\": \"Royal Guard Guidebook\", \"color\": \"light_purple\", \"italic\": false}'}, generation: 3, title: \"Royal Guard Guidebook\", author: \"The Royal Guard\", pages: ['{\"text\": \"§c§lProtocol One§r\nBe courteous.\nAllow your opponent the first attack.\n\n§c§lProtocol Two§r\nAttack back.\nShow your true strength of a Royal Guard.\"}', '{\"text\": \"§c§lProtocol Three§r\nStand strong.\nBeing attacked will hurt.\n\n§c§lProtocol Four§r\nStay agile.\nBend your knees and stand light on your feet to react quickly.\"}', '{\"text\": \"§c§lProtocol Five§r\nApprehend the enemy.\nWin.\n\n§c§lProtocol Six§r\nRetreat if you must.\nYour life is important too.\"}', '{\"text\": \"§c§lProtocol Seven§r\nKeep this book on you.\nHold this book in your offhand and refer to it if you forget the protocols.\"}'], lukaruRoyalBook: 1b}",
-				"slot": 8
+				"id": "minecraft:written_book",
+				"count": 1,
+				"slot": 8,
+				"components": {
+					"minecraft:custom_name": "{\"text\": \"Royal Guard Guidebook\", \"color\": \"light_purple\", \"italic\": false}",
+					"minecraft:written_book_content": {
+						"title": {
+							"raw": "Royal Guard Guidebook"
+						},
+						"author": "The Royal Guard",
+						"pages": [
+							"\"§c§lProtocol One§r\nBe courteous.\nAllow your opponent the first attack.\n\n§c§lProtocol Two§r\nAttack back.\nShow your true strength of a Royal Guard.\"",
+							"\"§c§lProtocol Three§r\nStand strong.\nBeing attacked will hurt.\n\n§c§lProtocol Four§r\nStay agile.\nBend your knees and stand light on your feet to react quickly.\"",
+							"\"§c§lProtocol Five§r\nApprehend the enemy.\nWin.\n\n§c§lProtocol Six§r\nRetreat if you must.\nYour life is important too.\"",
+							"\"§c§lProtocol Seven§r\nKeep this book on you.\nHold this book in your offhand and refer to it if you forget the protocols.\""
+						],
+						"generation": 3
+					},
+					"minecraft:custom_data":{
+						"lukaruRoyalBook": true
+					}
+				}
 			}
 		]
 	},
@@ -32,19 +68,19 @@
 		"duration_per_stack": 20,
 		"effects": [
 			{
-				"effect": "minecraft:strength",
+				"id": "minecraft:strength",
 				"is_ambient": true,
 				"show_particles": false,
 				"show_icon": true
 			},
 			{
-				"effect": "minecraft:resistance",
+				"id": "minecraft:resistance",
 				"is_ambient": true,
 				"show_particles": false,
 				"show_icon": true
 			},
 			{
-				"effect": "minecraft:speed",
+				"id": "minecraft:speed",
 				"is_ambient": true,
 				"show_particles": false,
 				"show_icon": true
@@ -57,7 +93,7 @@
 					"type": "origins:equipped_item",
 					"equipment_slot": "mainhand",
 					"item_condition": {
-						"type": "origins:nbt",
+						"type": "origins:custom_data",
 						"nbt": "{lukaruRoyalBook: 1b}"
 					}
 				},
@@ -65,7 +101,7 @@
 					"type": "origins:equipped_item",
 					"equipment_slot": "offhand",
 					"item_condition": {
-						"type": "origins:nbt",
+						"type": "origins:custom_data",
 						"nbt": "{lukaruRoyalBook: 1b}"
 					}
 				}
@@ -75,7 +111,7 @@
 	"keepinv": {
 		"type": "origins:keep_inventory",
 		"item_condition": {
-			"type": "origins:nbt",
+			"type": "origins:custom_data",
 			"nbt": "{lukaruRoyalBook: 1b}"
 		}
 	},
@@ -83,7 +119,7 @@
 		"name": "Prevents accidental offhand usage",
 		"type": "origins:prevent_item_use",
 		"item_condition": {
-			"type": "origins:nbt",
+			"type": "origins:custom_data",
 			"nbt": "{lukaruRoyalBook: 1b}"
 		},
 		"condition": {
@@ -93,7 +129,7 @@
 					"type": "origins:equipped_item",
 					"equipment_slot": "mainhand",
 					"item_condition": {
-						"type": "origins:nbt",
+						"type": "origins:custom_data",
 						"nbt": "{lukaruRoyalBook: 1b}"
 					},
 					"inverted": true
@@ -102,7 +138,7 @@
 					"type": "origins:equipped_item",
 					"equipment_slot": "offhand",
 					"item_condition": {
-						"type": "origins:nbt",
+						"type": "origins:custom_data",
 						"nbt": "{lukaruRoyalBook: 1b}"
 					}
 				}
